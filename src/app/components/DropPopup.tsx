@@ -5,7 +5,7 @@ const DropPopup = ({ drop }:{drop:Drop}) => (
     <Popup position={[drop.lat, drop.lng]}>
       <div>
         <h2>{drop.name}</h2>
-        <p>{drop.date.toLocaleDateString()}</p>
+        <p>{drop.date}</p>
         <iframe
           width="300"
           height="200"
