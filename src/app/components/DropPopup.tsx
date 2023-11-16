@@ -1,7 +1,7 @@
 import {Popup } from 'react-leaflet';
-import { Drop } from '../types';
+import {PopupProps } from '../types';
 
-const DropPopup = ({ drop }:{drop:Drop}) => (
+const DropPopup = ({ drop }:PopupProps) => (
     <Popup position={[drop.lat, drop.lng]}>
       <div>
         <h2>{drop.name}</h2>
@@ -11,7 +11,6 @@ const DropPopup = ({ drop }:{drop:Drop}) => (
           height="200"
           src={`https://www.youtube.com/embed/${drop.media}`}
           title="YouTube Video"
-          frameBorder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         ></iframe>
